@@ -26,8 +26,11 @@ setup(
         "Topic :: Software Development :: Libraries :: Python Modules",
         "Topic :: Scientific/Engineering :: Artificial Intelligence",
     ],
-    packages=find_packages(),
     install_requires=["pyyaml", "numpy", "importlib-metadata"],
     python_requires=">=3.6.1",
     include_package_data=True,
+    # Specify the source directory
+    package_dir={"": "src"},
+    # Automatically find all packages in the specified directory
+    packages=find_packages(where="src"),
 )
